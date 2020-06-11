@@ -9,7 +9,8 @@ from googletrans import Translator
 
 def main():
     translator = Translator()
-    result = translator.translate('How do you do?', dest='pl')
+    text = input('Type the word/phrase below:\n')
+    result = translator.translate(text)
     print(result)
     
 main()
