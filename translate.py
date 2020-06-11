@@ -16,7 +16,7 @@ def googletrans():
     print(result)
     
 def piratetrans(text):
-    url = 'https://api.funtranslations.com/translate/pirate.json'
+    url = 'https://api.funtranslations.com/translate/mandalorion.json'
     data = {'text': text}
     
     response = requests.post(url, data=data)
@@ -24,4 +24,4 @@ def piratetrans(text):
     print(type(json_data))
     print(json_data['contents']['translated'])
     
-piratetrans('I like eating apples')
+piratetrans('Hello, sir')
