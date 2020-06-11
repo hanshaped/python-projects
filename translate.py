@@ -19,6 +19,6 @@ def piratetrans(text):
     data = {'text': text}
     
     response = requests.post(url, data=data)
-    print(response.text)
+    print(type(response.text))
     
 piratetrans('Hello, sir')
