@@ -7,6 +7,7 @@ Created on Thu Jun 11 16:43:18 2020
 
 from googletrans import Translator
 import requests
+import json
 
 def googletrans():
     translator = Translator()
@@ -19,6 +20,8 @@ def piratetrans(text):
     data = {'text': text}
     
     response = requests.post(url, data=data)
-    print(type(response.text))
+    json_data = json.loads(response.text)
+    print(type(json_data))
+    print(json_data['contents']['translated'])
     
-piratetrans('Hello, sir')
+piratetrans('I like eating apples')
